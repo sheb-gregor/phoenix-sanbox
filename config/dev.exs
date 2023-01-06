@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :my_sandbox, MySandbox.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "dev",
+  password: "dev",
   hostname: "localhost",
   database: "my_sandbox_dev",
   stacktrace: true,
@@ -25,8 +25,8 @@ config :my_sandbox, MySandboxWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "+QsxjE4aloFu/6cBGV8xor/CfTNER5sHMxPDA+FLfCAARB6dEYduuBWDsXZirEGV",
   watchers: [
-    # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    # Start the esbuild watcher by calling `cd assets && node build.js --watch`
+    node: ["build.js", "--watch", cd: Path.expand("../assets", __DIR__)]
   ]
 
 # ## SSL Support
