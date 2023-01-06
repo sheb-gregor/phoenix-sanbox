@@ -1,6 +1,18 @@
 /* This file is for your main application CSS */
 @import "./phoenix.css";
 
+@import url("@fortawesome/fontawesome-free/css/fontawesome.css");
+@import url("@fortawesome/fontawesome-free/css/regular.css");
+@import url("@fortawesome/fontawesome-free/css/solid.css");
+@import url("@fortawesome/fontawesome-free/css/brands.css");
+@import url("@fortawesome/fontawesome-free/css/v4-shims.css");
+
+:root {
+  /* stylelint-disable property-no-unknown */
+  fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+}
+
+
 /* Alerts and form errors used by phx.new */
 .alert {
   padding: 15px;

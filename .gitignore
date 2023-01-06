@@ -24,6 +24,9 @@ my_sandbox-*.tar
 
 # Ignore assets that are produced by build tools.
 /priv/static/assets/
+/priv/static/favicon-*
+/priv/static/*.gz
+/priv/static/robots-*
 
 # Ignore digested assets cache.
 /priv/static/cache_manifest.json
