@@ -13,14 +13,16 @@ export class MyCounter extends LitElement {
     inc() {
         this.count++;
         this.dispatchEvent(new CustomEvent('count_changed'));
-        const event = new CustomEvent('new_count', {count: this.count});
+        const data = {count: this.count}
+        const event = new CustomEvent('new_count', {'detail': data});
         this.dispatchEvent(event);
     }
 
     dec() {
         this.count--;
         this.dispatchEvent(new CustomEvent('count_changed'));
-        const event = new CustomEvent('new_count', {count: this.count});
+        const data = {count: this.count}
+        const event = new CustomEvent('new_count', {'detail': data});
         this.dispatchEvent(event);
     }
 
